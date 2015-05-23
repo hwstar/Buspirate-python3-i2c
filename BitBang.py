@@ -140,7 +140,7 @@ class BBIO:
         return self.response(1)
 
     def raw_set_pins(self, pins):
-        self.port.write(bytes([0x80 | config]))
+        self.port.write(bytes([0x80 | pins]))
         self.timeout(0.1)
         return self.response(1)
 
